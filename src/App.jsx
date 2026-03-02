@@ -1,11 +1,16 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from './Redux/store'
 import Header from './Components/Header'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
     <>
-    <div>App</div>
+    <Provider store={store}>
     <Header/>
+    <Outlet/>
+    </Provider>
     </>
   )
 }
