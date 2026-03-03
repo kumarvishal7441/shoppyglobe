@@ -7,6 +7,7 @@ import Notfound from './Pages/Notfound.jsx'
 import Cart from './Pages/Cart.jsx'
 import Checkout from './Pages/Checkout.jsx'
 import Home from './Pages/Home.jsx'
+import ProductDetail from './Pages/ProductDetail.jsx'
 
 const Routerpath = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const Routerpath = createBrowserRouter([
       {
         path:"/Cart",
         element:<Cart/>
+      },
+      {
+        path:"/Product/:id",
+        element:<ProductDetail/>
       },
       {
         path:"/Checkout",
