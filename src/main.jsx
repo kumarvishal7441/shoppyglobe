@@ -4,8 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Notfound from './Pages/Notfound.jsx'
-import ProductList from './Components/ProductList.jsx'
 import Cart from './Pages/Cart.jsx'
+import Checkout from './Pages/Checkout.jsx'
+import Home from './Pages/Home.jsx'
 
 const Routerpath = createBrowserRouter([
   {
@@ -15,11 +16,15 @@ const Routerpath = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<ProductList/>
+        element:<Home/>
       },
       {
         path:"/Cart",
         element:<Cart/>
+      },
+      {
+        path:"/Checkout",
+        element:<Checkout/>
       }
     ]
   }
