@@ -8,10 +8,10 @@ import ProductItem from './Components/ProductItem'
 function App() {
   return (
     <>
-    <Provider store={store}>
-    <Header/>
-    <Outlet/>
-    </Provider>
+      <Provider store={store}>
+        <Header />
+        <Outlet />
+      </Provider>
     </>
   )
 }

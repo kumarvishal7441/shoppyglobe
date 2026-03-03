@@ -4,33 +4,33 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // add lazy loading 
-const Home = lazy(()=>import('./Pages/Home.jsx'));
-const Notfound = lazy(()=> import('./Pages/Notfound.jsx'));
-const ProductDetail = lazy(()=> import ('./Pages/ProductDetail.jsx'));
-const Cart = lazy(()=>import('./Pages/Cart.jsx'));
-const Checkout = lazy(()=>import('./Pages/Checkout.jsx'));
+const Home = lazy(() => import('./Pages/Home.jsx'));
+const Notfound = lazy(() => import('./Pages/Notfound.jsx'));
+const ProductDetail = lazy(() => import('./Pages/ProductDetail.jsx'));
+const Cart = lazy(() => import('./Pages/Cart.jsx'));
+const Checkout = lazy(() => import('./Pages/Checkout.jsx'));
 
 const Routerpath = createBrowserRouter([
   {
-    path:"/",
-    element:<App/>,
-    errorElement:<Notfound/>,
-    children:[
+    path: "/",
+    element: <App />,
+    errorElement: <Notfound />,
+    children: [
       {
-        path:"/",
-        element:<Home/>
+        path: "/",
+        element: <Home />
       },
       {
-        path:"/Cart",
-        element:<Cart/>
+        path: "/Cart",
+        element: <Cart />
       },
       {
-        path:"/Product/:id",
-        element:<ProductDetail/>
+        path: "/Product/:id",
+        element: <ProductDetail />
       },
       {
-        path:"/Checkout",
-        element:<Checkout/>
+        path: "/Checkout",
+        element: <Checkout />
       }
     ]
   }
@@ -38,6 +38,6 @@ const Routerpath = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={Routerpath}/>
+    <RouterProvider router={Routerpath} />
   </StrictMode>,
 )
