@@ -1,5 +1,4 @@
 import React from 'react';
-// import { ShoppingCart, Search, Store } from 'lucide-react'; 
 import { CiSearch, CiShoppingCart } from "react-icons/ci";
 import { useSelector, useDispatch } from 'react-redux';
 import { setSearchQuery } from '../Redux/productSlice';

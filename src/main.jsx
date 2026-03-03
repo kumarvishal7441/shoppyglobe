@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import Notfound from './Pages/Notfound.jsx'
+// add lazy loading 
 const Home = lazy(()=>import('./Pages/Home.jsx'));
 const Notfound = lazy(()=> import('./Pages/Notfound.jsx'));
 const ProductDetail = lazy(()=> import ('./Pages/ProductDetail.jsx'));

@@ -22,6 +22,7 @@ import { MdOutlineCheckCircle } from 'react-icons/md';
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsOrdered(true);
+    // in 3 second after checkout clear the cart go to home page
     setTimeout(() => {
       dispatch(clearCart());
       navigate('/');
@@ -38,7 +39,7 @@ import { MdOutlineCheckCircle } from 'react-icons/md';
       </div>
     );
   }
-
+// if cart is empty then route to home 
   if (cartItems.length === 0) {
     return (
       <div className="text-center py-20">
